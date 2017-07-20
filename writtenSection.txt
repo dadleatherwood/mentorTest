@@ -1,28 +1,40 @@
 Answer each question in a written format
 
 1. What does semantic HTML mean?
+  Semantic HTML is using tags that describe the meaning of the information on the webpage/application.  For example, using <nav>, <header>, <footer>, etc instead of using just <div>, <span>, etc.
 
 2. What is the box model?
+  The 'box' that surrounds every HTML element.  It includes the margins, borders, padding, and then the content.
 
 3. What is the difference between IDs and Classes?
+  Classes should be more broad and can focus on many items, where IDs should be more specific in nature, only being applied to one item.  You use # to denote an ID in CSS, and a '.' for classes.
 
 4. What does the z-index do?
+  I think of it as moving something forward and backward, or the stacking of the elements of the page.  You may use a z-index when you want the navbar to sit 'on top' of the main content
 
 5. Summarize what the keyword 'this' is used for?
+  'This' refers to an object and the context of that object.  Using 'this' in a function will let us know where to reach out for the object we are seeking.  We may have a constructor function that establishes a new 'dog' for instance.  If we called dog.firstName, this could be confused for another object on the global scope, so by using this.firstName we are able to clarify the context.
 
 6. What is a callback?
+  Callbacks is Javascript's way of calling a function as a parameter to another function.
 
 7. What is a closure?
+  A closure is a function within a function.  Children functions, the inner functions, have access to the local environment and any variables that are in the parent's scope.
 
 8. How does prototype work?
+  Every object has a prototype object, which is an object that has properties and methods that the object can then access.  You can also build prototypes using constructor functions.
 
 9. What is MVC?
+  'M' stand for model, 'V' is for view, and 'C' is for controller.  This architecture is used to separate the logic into three areas.  I think of the view as the user side of things.  It will interact with the controller, the middle man, that will then reach out to the model, which is the data side, and then present the information back to the view.  The view and model will never interact directly.
 
 10. What is the component lifecycle?
+  In react components have methods that they can call at particular times.  Examples of these would be render(), componentWillMount(), componentDidMount(), and constructor().  These methods give us the opportunity to run things upon events happening in the code.
 
 11. What is REST?
+  REST is representational state transfer, which is an architecture for designing networked applications. I think for us it is what allows us to $http requests for creating, reading, updating and deleting.
 
 12. Name three ways of getting data from the URL using express
+  GET, POST and PUT requests.
 
 create table users (
 id serial,
@@ -32,10 +44,10 @@ email varchar(255)
 
 12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
--Get all users:
+-Get all users:  SELECT * FROM users
 
--Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+-Create a new user with the name of 'your name' and an email of 'fake@fake.com':  INSERT INTO users (name, email) VALUES ('Jacob Leatherwood', 'fake@fake.com')
 
--Update the newly created user's name to 'Bobby Boy':
+-Update the newly created user's name to 'Bobby Boy':  UPDATE users SET name = 'Bobby Boy' WHERE name = 'Jacob Leatherwood' (would prefer to use id as 'where' condition)
 
--Delete the newly updated user:
+-Delete the newly updated user:  DELETE FROM users WHERE name = 'Bobby Boy'
